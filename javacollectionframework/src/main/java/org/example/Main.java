@@ -7,6 +7,7 @@ public class Main {
         VT_1();
         LT();
         ST();
+        ARL();
 
     }
     public static void LL_1(){
@@ -18,8 +19,8 @@ public class Main {
         System.out.println("Size is " + l.size());
         System.out.println("The Content Are : " + l);
         System.out.println("The first one is " + l.get(0));
-        l.remove(0); // remove l(0) that is 1
         System.out.println("Index of 1 is " + l.indexOf(1));
+        l.remove(0); // remove l(0) that is 1
         System.out.println("----------------------------------");
     }
     public static void HM_1(){
@@ -73,6 +74,16 @@ public class Main {
         for (int i : mySet) {
             System.out.println(i);
         }
+        System.out.println("----------------------------------");
+    }
+    public static void ARL(){
+        System.out.println("ArrayList");
+        ArrayList<String> arrayList = new ArrayList<String>();
+        arrayList.add("Goko");
+        arrayList.add("Tonnam");
+        arrayList.add("Blue");
+        System.out.println(arrayList);
+        System.out.println(arrayList.get(1));
         System.out.println("----------------------------------");
     }
 }
