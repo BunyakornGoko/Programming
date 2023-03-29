@@ -1,0 +1,28 @@
+name : MyPlugin;
+main : Hello.Main;
+version : 0.1;
+commands:
+  hello:
+    usage: /<command>
+    description: Test Plugin
+  health:
+    usage: /<command>
+    aliases: [health,givehealth]
+    description: Give Health
+  food:
+    usage: /<command>
+    aliases: [food,givefood]
+    description: Give Food
+  pick:
+    usage: /<command>
+    aliases: [pick,pickitem]
+    description: Item add
+  clear:
+    usage: /<command>
+    aliases: [ ci,clearitem ]
+    description: Remove Item
+  dead:
+    usage: /<command>
+    aliases: [dead , die , I want to die]
+    description: Dead
+

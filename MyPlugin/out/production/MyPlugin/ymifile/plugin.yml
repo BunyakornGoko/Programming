@@ -1,0 +1,7 @@
+name : MyPlugin;
+main : Hello.Main;
+version : 0.1;
+commands:
+  hello:
+    usage: /<command>
+    description: Test Plugin
