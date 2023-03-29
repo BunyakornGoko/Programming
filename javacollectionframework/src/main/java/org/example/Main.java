@@ -8,9 +8,9 @@ public class Main {
         LT();
         ST();
         ARL();
-
+        SHS();
     }
-    public static void LL_1(){
+    static void LL_1(){
         System.out.println("LinkedList");
         List l = new LinkedList();
         l.add(1);
@@ -23,7 +23,7 @@ public class Main {
         l.remove(0); // remove l(0) that is 1
         System.out.println("----------------------------------");
     }
-    public static void HM_1(){
+    static void HM_1(){
         System.out.println("HashMap");
         Map m = new HashMap();
         m.put(1,"Hello");
@@ -35,7 +35,7 @@ public class Main {
         System.out.println("Content in the map are : " + m.entrySet());
         System.out.println("----------------------------------");
     }
-    public static void VT_1(){
+    static void VT_1(){
         System.out.println("Vector");
         Vector v = new Vector();
         v.add(1);
@@ -45,7 +45,7 @@ public class Main {
         while (e.hasMoreElements()) System.out.println(e.nextElement());
         System.out.println("----------------------------------");
     }
-    public static void LT(){
+    static void LT(){
         System.out.println("List");
         List<String> myList = new ArrayList<>();
 
@@ -60,7 +60,7 @@ public class Main {
         }
         System.out.println("----------------------------------");
     }
-    public static void ST(){
+    static void ST(){
         System.out.println("Set");
         // Creating a Set of Integers
         Set<Integer> mySet = new HashSet<>();
@@ -76,7 +76,7 @@ public class Main {
         }
         System.out.println("----------------------------------");
     }
-    public static void ARL(){
+    static void ARL(){
         System.out.println("ArrayList");
         ArrayList<String> arrayList = new ArrayList<String>();
         arrayList.add("Goko");
@@ -85,5 +85,21 @@ public class Main {
         System.out.println(arrayList);
         System.out.println(arrayList.get(1));
         System.out.println("----------------------------------");
+
+
     }
+    static void SHS(){
+        System.out.println("Set");
+        Set<Integer> s = new HashSet<>();
+        s.add(2);
+        s.add(3);
+        s.add(5);
+        s.add(5);
+        for (Integer e : s){
+            System.out.println("Element in set s: " + e);
+        }
+        System.out.println("Size : " + s.size());
+        System.out.println("---------------------------------");
+    }
+
 }
