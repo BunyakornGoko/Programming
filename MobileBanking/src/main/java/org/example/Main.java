@@ -32,17 +32,17 @@ public class Main {
         Mymo m2 = new Mymo("Blue",12348,1000);
         System.out.println(m2.toString());
         System.out.println(m2.getBalance());
-        System.out.println(m2.checkBanKing(500));
-        System.out.println(m2.checkBanKing(1200));
+        System.out.println(m2.checkBanking(500));
+        System.out.println(m2.checkBanking(1200));
         System.out.println("--------------------------------------------");
     }
     public static void TestWithDraw(){
         Mymo m3 = new Mymo("Oat",14256,500);
         System.out.println("Balance1: " + m3.getBalance());
-        m3.Withdraw(300);
+        m3.withdraw(300);
         System.out.println("Withdraw: " + m3.getWithdraw());
         System.out.println("Balance2: " + m3.getBalance());
-        m3.Withdraw(20);
+        m3.withdraw(20);
         System.out.println("Withdraw: " + m3.getWithdraw());
         System.out.println("Balance3: " + m3.getBalance());
         System.out.println("--------------------------------------------");
@@ -52,7 +52,7 @@ public class Main {
         Mymo m3 = new Mymo("Tew",66666,0);
         System.out.println(k3);
         System.out.println(m3);
-        k3.Tranfer(m3,200);
+        k3.transfer(m3,200);
         System.out.println(k3);
         System.out.println(m3);
         System.out.println("--------------------------------------------");
@@ -72,8 +72,8 @@ public class Main {
     public static void TestDeposit(){
         Banking k5 = new K_PLUS("Fonbeer",65108,1000);
         System.out.println(k5.toString());
-        k5.DePoSit(500);
-        k5.DePoSit(500);
+        k5.deposit(500);
+        k5.deposit(500);
         System.out.println(k5.toString());
         System.out.println("--------------------------------------------");
     }

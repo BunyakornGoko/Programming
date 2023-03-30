@@ -33,6 +33,7 @@ public class Main {
         System.out.println("Index 2 in map is " + m.get(2));
         System.out.println("Key of the map is " + m.keySet());
         System.out.println("Content in the map are : " + m.entrySet());
+        System.out.println(m.size());
         System.out.println("----------------------------------");
     }
     static void VT_1(){

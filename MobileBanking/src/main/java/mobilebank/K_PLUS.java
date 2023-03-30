@@ -12,7 +12,7 @@ public class K_PLUS extends Banking implements sound {
     }
 
     @Override
-    public String tranfer_sound() {
+    public String transfer_sound() {
         return "JIDJIDJIDJID";
     }
 }

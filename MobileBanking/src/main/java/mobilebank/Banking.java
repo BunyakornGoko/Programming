@@ -63,15 +63,15 @@ public abstract class Banking {
                 ", Coins=" + coins +"}";
     }
     public abstract String operating_sound();
-    public  abstract String tranfer_sound();
+    public  abstract String transfer_sound();
 
-    public boolean checkBanKing(int amount){
+    public boolean checkBanking(int amount){
         if (amount <= 0 || amount > balance ){
             return false;
         }
         return true;
     }
-    public void Withdraw(int amount1){
+    public void withdraw(int amount1){
         if(amount1 <= 0 || amount1 > balance){
             throw new RuntimeException("You can't withdraw in transaction");
         }
@@ -79,7 +79,7 @@ public abstract class Banking {
         this.withdraw = amount1;
     }
 
-    public void Tranfer(Banking o,int money){
+    public void transfer(Banking o,int money){
         if(money <= 0 || money > balance){
             throw  new RuntimeException("You can't tranfer in transaction");
         }
@@ -87,7 +87,7 @@ public abstract class Banking {
         o.setBalance(money);
         tranferto = money;
     }
-    public void DePoSit(int deposit){
+    public void deposit(int deposit){
         Deposit = balance + deposit;
         this.balance = Deposit;
     }
@@ -99,8 +99,5 @@ public abstract class Banking {
             }
         }
         return coins;
-    }
-    public void checkStatement(){
-
     }
 }
