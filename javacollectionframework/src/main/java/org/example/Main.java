@@ -9,6 +9,9 @@ public class Main {
         ST();
         ARL();
         SHS();
+        System.out.println("Test Treemap");
+        System.out.println(gradeCal(80));
+
     }
     static void LL_1(){
         System.out.println("LinkedList");
@@ -101,6 +104,16 @@ public class Main {
         }
         System.out.println("Size : " + s.size());
         System.out.println("---------------------------------");
+    }
+    public static String gradeCal(int score){
+        TreeMap<Integer , String> grades = new TreeMap<>();
+        grades.put(0 , "F");
+        grades.put(50,"D");
+        grades.put(60,"C");
+        grades.put(70,"B");
+        grades.put(80,"A");
+        return grades.floorEntry(score).getValue();
+
     }
 
 }

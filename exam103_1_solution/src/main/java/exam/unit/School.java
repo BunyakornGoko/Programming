@@ -1,28 +1,15 @@
 package exam.unit;
 
-public class School {
+import exam.base.OrgUnit;
 
-    private final int code;
-    private String name;
+public class School extends OrgUnit {
     private double balance;
-    private String logging = "";
 
     public School(int code, String name) {
-        this.code = code;
-        this.name = name;
+        super(code, name);
+        this.balance = balance;
     }
 
-    public int getCode() {
-        return code;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public double getBalance() {
         return balance;
@@ -38,7 +25,4 @@ public class School {
         logging += "spend(" + amount + ")";
     }
 
-    public String getLog() {
-        return logging;
-    }
 }

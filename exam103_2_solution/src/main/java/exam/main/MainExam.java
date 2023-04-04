@@ -5,6 +5,10 @@ import exam.base.ToBeLambda;
 import exam.base.ToCompare;
 import exam.base.ToIterate;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Iterator;
+
 public class MainExam {
 
     // replace 999 with the last three digits of your student id.
@@ -35,26 +39,22 @@ public class MainExam {
 
         /* EXAM01: change ToBeEnum class to ToBeEnum enum that consists of
         the following enum values: FRESHMAN, SOPHOMORE, JUNIOR, SENIOR */
-        ToBeEnum FRESHMAN = new ToBeEnum(1, "Freshman");
-        ToBeEnum SOPHOMORE = new ToBeEnum(2, "Sophomore");
-        ToBeEnum JUNIOR = new ToBeEnum(3, "Junior");
-        ToBeEnum SENIOR = new ToBeEnum(4, "Senior");
 
-        System.out.println("  " + FRESHMAN
-                + " : " + FRESHMAN.getName()
-                + " (" + FRESHMAN.getYear() + ")");
+        System.out.println("  " + ToBeEnum.FRESHMAN
+                + " : " + ToBeEnum.FRESHMAN.getName()
+                + " (" + ToBeEnum.FRESHMAN.getYear() + ")");
 
-        System.out.println("  " + SOPHOMORE
-                + " : " + SOPHOMORE.getName()
-                + " (" + SOPHOMORE.getYear() + ")");
+        System.out.println("  " + ToBeEnum.SOPHOMORE
+                + " : " + ToBeEnum.SOPHOMORE.getName()
+                + " (" + ToBeEnum.SOPHOMORE.getYear() + ")");
 
-        System.out.println("  " + JUNIOR
-                + " : " + JUNIOR.getName()
-                + " (" + JUNIOR.getYear() + ")");
+        System.out.println("  " + ToBeEnum.JUNIOR
+                + " : " + ToBeEnum.JUNIOR.getName()
+                + " (" + ToBeEnum.JUNIOR.getYear() + ")");
 
-        System.out.println("  " + SENIOR
-                + " : " + SENIOR.getName()
-                + " (" + SENIOR.getYear() + ")");
+        System.out.println("  " + ToBeEnum.SENIOR
+                + " : " + ToBeEnum.SENIOR.getName()
+                + " (" + ToBeEnum.SENIOR.getYear() + ")");
     }
 
     private static void exam02ToCompare() {
@@ -72,14 +72,15 @@ public class MainExam {
 
         /* EXAM02.3: call Arrays.sort() method so that it sorts 
         the cmps array by the name of ToCompare objects */
-        //Arrays.sort(....);
+        Arrays.sort(cmps);
         System.out.print("  Sort by Name");
         for (ToCompare cmp : cmps) System.out.print(" : " + cmp);
         System.out.println();
 
         /* EXAM02.4: call Arrays.sort() method and provide a comparator
         so that it sorts the cmps array by the values of ToCompare objects */
-        //Arrays.sort(....);
+        Arrays.sort(cmps,  ToCompare::compareByValue);
+
         System.out.print("  Sort by Value");
         for (ToCompare cmp : cmps) System.out.print(" : " + cmp);
         System.out.println();
@@ -93,6 +94,10 @@ public class MainExam {
         ToIterate<ToCompare> dataSet = ToIterate.of(cmps);
 
         /* EXAM03.2: use ToIterate's iterator to print all elements in the dataSet out. */
+        Iterator<ToCompare> t1 = dataSet.iterator();
+        while(t1.hasNext()){
+            System.out.println(t1.next());
+        }
 
     }
 
@@ -107,14 +112,14 @@ public class MainExam {
         
         /* EXAM04.2: call Arrays.sort() method and provide a comparator
         so that it sorts the lds array by the firstname */
-        //Arrays.sort(...);
+        Arrays.sort(lds , ToBeLambda.compareByFirstname);
         System.out.print("  Sorted by Firstname");
         for (ToBeLambda ld : lds) System.out.print(" : " + ld);
         System.out.println();
 
         /* EXAM04.3: call Arrays.sort() method and provide a comparator
         so that it sorts the lds array by the firstname in a reverse order */
-        //Arrays.sort(...);
+        Arrays.sort(lds , ToBeLambda.compareByFirstname.reversed());
         System.out.print("  Sorted by Firstname in a reverse order");
         for (ToBeLambda ld : lds) System.out.print(" : " + ld);
         System.out.println();
@@ -125,12 +130,12 @@ public class MainExam {
 
         /* EXAM05.1: use a stream to print all objects in the cmps array out. */
         System.out.println("exam05.1 ----------");
-        //Arrays.stream(cmps)...
+        Arrays.stream(cmps).forEach(System.out::println);
 
         /* EXAM05.2: use a stream to select only the objects in the lds array 
         that the firstname ends with "e". print the result out. */
         System.out.println("exam05.2 ----------");
-        //Arrays.stream(lds)....
+        Arrays.stream(lds).filter(o -> o.evalFirstname(s -> s.endsWith("e"))).forEach(System.out::println);
         
     }
 }

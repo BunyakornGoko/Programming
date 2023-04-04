@@ -1,0 +1,41 @@
+package exam.base;
+
+public abstract class OrgUnit implements Loggable{
+    private final int code;
+    private String name;
+    protected String logging = "";
+
+    public int getCode() {
+        return code;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getLog() {
+        return logging;
+    }
+
+    public OrgUnit(int code, String name) {
+        this.code = code;
+        this.name = name;
+    }
+
+    @Override
+    public void clearLog() {
+        logging = "";
+    }
+
+    @Override
+    public String toString() {
+        return "OrgUnit{" +
+                "code=" + code +
+                ", name='" + name + '\'' +
+                ", logging='" + logging + '\'' +
+                '}';
+    }
+}

@@ -1,30 +1,16 @@
 package exam.unit;
 
-public class Department {
+import exam.base.OrgUnit;
 
-    private final int code;
-    private String name;
-    private School school;
-    private String logging;
-
+public class Department extends OrgUnit {
     public Department(int code, String name, School school) {
-        this.code = code;
-        this.name = name;
+        super(code, name);
         this.school = school;
-        this.logging = school.getCode() + ";";
     }
 
-    public int getCode() {
-        return code;
-    }
+    private School school;
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public School getSchool() {
         return school;
@@ -35,7 +21,4 @@ public class Department {
         this.logging += school.getCode() + ";";
     }
 
-    public String getLog() {
-        return logging;
-    }
 }
