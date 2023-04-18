@@ -13,14 +13,14 @@ public class MainExam {
 
     // replace 999 with the last three digits of your student id.
     // replace YOUR_STUDENT_ID with your "student id inside a quote".
-    private static final ToCompare[] cmps = { new ToCompare(999, "YOUR_STUDENT_ID"),
+    private static final ToCompare[] cmps = { new ToCompare(108, "65130500108"),
         new ToCompare(-7, "Seven"), new ToCompare(-2, "Two"), 
         new ToCompare(-9, "Nine"), new ToCompare(-3, "Three") };
     
     // replace YOUR_FIRSTNAME with your firstname.
     // replace YOUR_LASTNAME with your lastname.
     private static final ToBeLambda[] lds = {
-        new ToBeLambda("YOUR_FIRSTNAME", "YOUR_LASTNAME"),
+        new ToBeLambda("Bunyakorn", "Pornsombatpaibool"),
         new ToBeLambda("Steve","Johnson"),
         new ToBeLambda("Joseph","Aliba"), 
         new ToBeLambda("Alice","Smith")
