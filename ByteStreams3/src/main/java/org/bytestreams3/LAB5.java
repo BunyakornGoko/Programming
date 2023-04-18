@@ -30,5 +30,6 @@ public class LAB5 {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
+        System.out.println("New New New");
     }
 }
